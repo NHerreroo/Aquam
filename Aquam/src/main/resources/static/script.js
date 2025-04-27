@@ -78,58 +78,73 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 11,
             name: "Premium Water Bottle",
             price: 24.99,
-            image: "/Fotos/Captura de pantalla 2025-04-27 224815.png",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115442.png",
             category: "Bottles"
         },
         {
             id: 12,
             name: "Water Filter System",
             price: 129.99,
-            image: "/Fotos/Captura de pantalla 2025-04-27 224834.png",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115528.png",
             category: "Filters"
         },
         {
             id: 13,
             name: "Hydration Pack",
             price: 49.99,
-            image: "/Fotos/Captura de pantalla 2025-04-27 224914.png",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115547.png",
             category: "Accessories"
         },
         {
             id: 14,
             name: "Mineral Water (6-pack)",
             price: 12.99,
-            image: "/Fotos/Captura de pantalla 2025-04-27 224931.png",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115605.png",
             category: "Beverages"
         },
         {
             id: 15,
             name: "Smart Water Tracker",
             price: 39.99,
-            image: "/Fotos/Captura de pantalla 2025-04-27 225002.png",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115623.png",
             category: "Tech"
         },
         {
             id: 16,
             name: "Eco-Friendly Water Jug",
             price: 34.99,
-            image: "/Fotos/Captura de pantalla 2025-04-27 225020.png",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115641.png",
             category: "Containers"
         },
         {
             id: 17,
             name: "Alkaline Water (12-pack)",
             price: 18.99,
-            image: "/Fotos/Captura de pantalla 2025-04-27 225037.png",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115657.png",
             category: "Beverages"
         },
         {
             id: 18,
             name: "Portable Water Purifier",
             price: 79.99,
-            image: "/Fotos/Captura de pantalla 2025-04-27 225053.png",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115714.png",
+            category: "Filters"
+        },
+        {
+            id: 19,
+            name: "Portable Water Purifier",
+            price: 79.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 115730.png",
+            category: "Filters"
+        },
+        {
+            id: 20,
+            name: "Portable Water Purifier",
+            price: 79.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 115746.png",
             category: "Filters"
         }
+
     ];
 
     // Load products
@@ -153,18 +168,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
 
-        productCard.querySelector('.add-to-cart').addEventListener('click', function() {
-            const productId = this.getAttribute('data-id');
-            cartCount++;
-            updateCartCount();
-            console.log(`Added product ID ${productId} to cart`);
-        });
-
         productsContainer.appendChild(productCard);
     });
-
-
-    // Handle add to cart buttons
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     let cartCount = 0;
 
@@ -174,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cartCount++;
             updateCartCount();
 
-            // In a real app, you would send this to your Spring Boot backend
+
             console.log(`Added product ID ${productId} to cart`);
         });
     });
