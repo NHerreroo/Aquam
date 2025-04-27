@@ -8,58 +8,73 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 1,
             name: "Premium Water Bottle",
             price: 24.99,
-            image: "https://via.placeholder.com/300",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115442.png",
             category: "Bottles"
         },
         {
             id: 2,
             name: "Water Filter System",
             price: 129.99,
-            image: "https://via.placeholder.com/300",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115528.png",
             category: "Filters"
         },
         {
             id: 3,
             name: "Hydration Pack",
             price: 49.99,
-            image: "https://via.placeholder.com/300",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115547.png",
             category: "Accessories"
         },
         {
             id: 4,
             name: "Mineral Water (6-pack)",
             price: 12.99,
-            image: "https://via.placeholder.com/300",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115605.png",
             category: "Beverages"
         },
         {
             id: 5,
             name: "Smart Water Tracker",
             price: 39.99,
-            image: "https://via.placeholder.com/300",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115623.png",
             category: "Tech"
         },
         {
             id: 6,
             name: "Eco-Friendly Water Jug",
             price: 34.99,
-            image: "https://via.placeholder.com/300",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115641.png",
             category: "Containers"
         },
         {
             id: 7,
             name: "Alkaline Water (12-pack)",
             price: 18.99,
-            image: "https://via.placeholder.com/300",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115657.png",
             category: "Beverages"
         },
         {
             id: 8,
             name: "Portable Water Purifier",
             price: 79.99,
-            image: "https://via.placeholder.com/300",
+            image: "/Fotos/Captura de pantalla 2025-04-27 115714.png",
+            category: "Filters"
+        },
+        {
+            id: 9,
+            name: "Portable Water Purifier",
+            price: 79.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 115730.png",
+            category: "Filters"
+        },
+        {
+            id: 10,
+            name: "Portable Water Purifier",
+            price: 79.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 115746.png",
             category: "Filters"
         }
+
     ];
 
     // Load products
