@@ -1,75 +1,116 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AQUAM - Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>AQUAM - Water Products Store</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<!-- Wave Background -->
 <div class="wave-background">
     <div class="wave wave1"></div>
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
 </div>
 
-<div class="container">
-    <div class="login-card">
-        <div class="logo-container">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-z37R7FXa3KkUon72OuZQFGVMcUPJMM.png" alt="AQUAM Logo" class="logo">
-        </div>
-        <h2>Sign in to your account</h2>
-
-        <form class="login-form" action="/shop" method="get">
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" id="email" placeholder="name@example.com" required>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-z37R7FXa3KkUon72OuZQFGVMcUPJMM.png" alt="AQUAM Logo" class="logo">
+                </a>
             </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <div class="password-input">
-                    <input type="password" id="password" placeholder="••••••••" required>
-                    <button type="button" class="toggle-password" onclick="togglePassword()">
-                        <i class="fa-regular fa-eye" id="eye-icon"></i>
-                    </button>
-                </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link">All Products</a></li>
+                    <li><a href="#" class="nav-link">Bottles</a></li>
+                    <li><a href="#" class="nav-link">Filters</a></li>
+                    <li><a href="#" class="nav-link">Accessories</a></li>
+                    <li><a href="#" class="nav-link">Beverages</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-button">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <button class="icon-button">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+                <button class="icon-button cart-button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <a href="login.html" class="icon-button">
+                    <i class="fa-solid fa-user"></i>
+                </a>
             </div>
 
-            <div class="form-options">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember">
-                    <label for="remember">Remember me</label>
-                </div>
-                <a href="#" class="forgot-password">Forgot password?</a>
-            </div>
-
-            <button type="submit" class="login-button">Sign in</button>
-        </form>
-
-        <div class="signup-link">
-            <span>Don't have an account?</span>
-            <a href="#">Sign up</a>
+            <button class="mobile-menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </div>
-</div>
+</header>
 
-<script>
-    function togglePassword() {
-      const passwordInput = document.getElementById('password');
-      const eyeIcon = document.getElementById('eye-icon');
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Pure Water, Pure Life</h1>
+            <p>Discover our premium collection of water products designed for health and sustainability.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Shop Now</button>
+                <button class="btn btn-outline">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-      if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        eyeIcon.classList.remove('fa-eye');
-        eyeIcon.classList.add('fa-eye-slash');
-      } else {
-        passwordInput.type = 'password';
-        eyeIcon.classList.remove('fa-eye-slash');
-        eyeIcon.classList.add('fa-eye');
-      }
-    }
-</script>
+<!-- Products Section -->
+<section class="products-section">
+    <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+
+        <div class="products-grid" id="products-container">
+            <!-- Products will be loaded here via JavaScript -->
+        </div>
+
+        <div class="view-all">
+            <button class="btn btn-outline">View All Products</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-z37R7FXa3KkUon72OuZQFGVMcUPJMM.png" alt="AQUAM Logo" class="logo">
+                <p>Pure water solutions for a better life</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">Products</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="#" class="footer-link">FAQ</a>
+                <a href="login.html" class="footer-link">Login</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> AQUAM. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
