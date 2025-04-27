@@ -129,9 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 79.99,
             image: "/Fotos/Captura de pantalla 2025-04-27 225053.png",
             category: "Filters"
-        },
-
-
+        }
     ];
 
     // Load products
@@ -155,8 +153,16 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
 
+        productCard.querySelector('.add-to-cart').addEventListener('click', function() {
+            const productId = this.getAttribute('data-id');
+            cartCount++;
+            updateCartCount();
+            console.log(`Added product ID ${productId} to cart`);
+        });
+
         productsContainer.appendChild(productCard);
     });
+
 
     // Handle add to cart buttons
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
