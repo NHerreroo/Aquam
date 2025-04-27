@@ -73,7 +73,64 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 79.99,
             image: "/Fotos/Captura de pantalla 2025-04-27 115746.png",
             category: "Filters"
-        }
+        },
+        {
+            id: 11,
+            name: "Premium Water Bottle",
+            price: 24.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 224815.png",
+            category: "Bottles"
+        },
+        {
+            id: 12,
+            name: "Water Filter System",
+            price: 129.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 224834.png",
+            category: "Filters"
+        },
+        {
+            id: 13,
+            name: "Hydration Pack",
+            price: 49.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 224914.png",
+            category: "Accessories"
+        },
+        {
+            id: 14,
+            name: "Mineral Water (6-pack)",
+            price: 12.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 224931.png",
+            category: "Beverages"
+        },
+        {
+            id: 15,
+            name: "Smart Water Tracker",
+            price: 39.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 225002.png",
+            category: "Tech"
+        },
+        {
+            id: 16,
+            name: "Eco-Friendly Water Jug",
+            price: 34.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 225020.png",
+            category: "Containers"
+        },
+        {
+            id: 17,
+            name: "Alkaline Water (12-pack)",
+            price: 18.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 225037.png",
+            category: "Beverages"
+        },
+        {
+            id: 18,
+            name: "Portable Water Purifier",
+            price: 79.99,
+            image: "/Fotos/Captura de pantalla 2025-04-27 225053.png",
+            category: "Filters"
+        },
+
 
     ];
 
