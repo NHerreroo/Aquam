@@ -23,7 +23,7 @@ FROM openjdk:21-jdk-slim
 EXPOSE 8080
 
 # Copiamos el archivo JAR generado en la fase de construcción
-COPY --from=build /app/target/LolApi-0.0.1-SNAPSHOT.jar /app.jar
+COPY --from=build /app/target/Aquam-0.0.1-SNAPSHOT.jar /app.jar
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
