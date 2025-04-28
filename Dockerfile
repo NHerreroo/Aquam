@@ -1,29 +1,26 @@
-# Usamos una imagen base de Ubuntu para la fase de construcción
-FROM ubuntu:latest AS build
+# Etapa 1: Build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 
-# Instalamos las dependencias necesarias
-RUN apt-get update && apt-get install -y \
-    openjdk-21-jdk \
-    maven \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copiamos el código fuente del proyecto al contenedor
+# Copiamos el proyecto al contenedor
 COPY Aquam /app
 
 # Establecemos el directorio de trabajo
 WORKDIR /app
 
-# Ejecutamos el comando de Maven para construir el proyecto
+# Construimos el proyecto (y saltamos tests)
 RUN mvn clean package -DskipTests
 
-# Usamos una imagen base más ligera para la fase de ejecución
-FROM openjdk:21-jdk-slim
+# Etapa 2: Runtime
+FROM eclipse-temurin:21-jre-jammy
 
-# Exponemos el puerto en el que correrá la aplicación
+# Creamos un directorio de trabajo en el contenedor de ejecución
+WORKDIR /app
+
+# Copiamos el JAR generado desde la etapa de build
+COPY --from=build /app/target/*.jar app.jar
+
+# Exponemos el puerto 8080
 EXPOSE 8080
 
-# Copiamos el archivo JAR generado en la fase de construcción
-COPY --from=build /app/target/Aquam-0.0.1-SNAPSHOT.jar /app.jar
-
-# Comando para ejecutar la aplicación
+# Comando para arrancar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
